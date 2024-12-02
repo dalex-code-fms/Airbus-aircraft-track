@@ -1,0 +1,413 @@
+{
+  "aircrafts": [
+    {
+      "id": 1,
+      "name": "A318",
+      "type": "moyen-courrier",
+      "phase": "service",
+      "equipments": [
+        {
+          "id": 1,
+          "nom": "Système de divertissement en vol",
+          "type": "confort"
+        }
+      ],
+      "image": "assets/aircrafts/A318.png"
+    },
+    {
+      "id": 2,
+      "name": "A319",
+      "type": "moyen-courrier",
+      "phase": "fin de vie",
+      "equipments": [
+        { "id": 2, "nom": "Wi-Fi intégré", "type": "connectivité" }
+      ],
+      "image": "assets/aircrafts/A319.png"
+    },
+    {
+      "id": 3,
+      "name": "A320",
+      "type": "moyen-courrier",
+      "phase": "production",
+      "equipments": [
+        { "id": 3, "nom": "Réacteurs CFM LEAP-1A", "type": "propulsion" }
+      ],
+      "image": "assets/aircrafts/A320.png"
+    },
+    {
+      "id": 4,
+      "name": "A321",
+      "type": "moyen-courrier",
+      "phase": "support",
+      "equipments": [
+        {
+          "id": 4,
+          "nom": "Capteurs météorologiques avancés",
+          "type": "sécurité"
+        }
+      ],
+      "image": "assets/aircrafts/A321.png"
+    },
+    {
+      "id": 5,
+      "name": "A321XLR",
+      "type": "long-courrier",
+      "phase": "certification",
+      "equipments": [
+        {
+          "id": 5,
+          "nom": "Réservoirs de carburant optimisés",
+          "type": "performance"
+        }
+      ],
+      "image": "assets/aircrafts/A321XLR.png"
+    },
+    {
+      "id": 6,
+      "name": "A330",
+      "type": "long-courrier",
+      "phase": "service",
+      "equipments": [
+        { "id": 6, "nom": "Cabine XL Comfort", "type": "confort" }
+      ],
+      "image": "assets/aircrafts/A330.png"
+    },
+    {
+      "id": 7,
+      "name": "A340",
+      "type": "long-courrier",
+      "phase": "retrait",
+      "equipments": [
+        { "id": 7, "nom": "Quatre moteurs Trent 500", "type": "propulsion" }
+      ],
+      "image": "assets/aircrafts/A340.png"
+    },
+    {
+      "id": 8,
+      "name": "A350",
+      "type": "long-courrier",
+      "phase": "service",
+      "equipments": [
+        { "id": 8, "nom": "Fibre de carbone", "type": "matériaux" }
+      ],
+      "image": "assets/aircrafts/A350F.png"
+    },
+    {
+      "id": 9,
+      "name": "A380",
+      "type": "très-long-courrier",
+      "phase": "fin de vie",
+      "equipments": [
+        { "id": 9, "nom": "Double pont cabine", "type": "design" }
+      ],
+      "image": "assets/aircrafts/A380.png"
+    },
+    {
+      "id": 10,
+      "name": "A400M",
+      "type": "militaire",
+      "phase": "service",
+      "equipments": [
+        {
+          "id": 10,
+          "nom": "Système de ravitaillement aérien",
+          "type": "ravitaillement"
+        }
+      ],
+      "image": "assets/aircrafts/A400M.png"
+    },
+    {
+      "id": 11,
+      "name": "Beluga XL",
+      "type": "cargo",
+      "phase": "service",
+      "equipments": [
+        { "id": 11, "nom": "Compartiment élargi", "type": "logistique" }
+      ],
+      "image": "assets/aircrafts/belugaXL.png"
+    },
+    {
+      "id": 12,
+      "name": "C295",
+      "type": "militaire",
+      "phase": "service",
+      "equipments": [
+        { "id": 12, "nom": "Radar de surveillance", "type": "détection" }
+      ],
+      "image": "assets/aircrafts/c295.png"
+    },
+    {
+      "id": 13,
+      "name": "A310 MRTT",
+      "type": "militaire",
+      "phase": "service",
+      "equipments": [
+        { "id": 13, "nom": "Ravitailleur multi-rôle", "type": "logistique" }
+      ],
+      "image": "assets/aircrafts/A310MRTT.png"
+    },
+    {
+      "id": 14,
+      "name": "A220",
+      "type": "moyen-courrier",
+      "phase": "production",
+      "equipments": [
+        {
+          "id": 14,
+          "nom": "Faible consommation de carburant",
+          "type": "performance"
+        }
+      ],
+      "image": "assets/aircrafts/A220.png"
+    },
+    {
+      "id": 15,
+      "name": "A319neo",
+      "type": "moyen-courrier",
+      "phase": "certification",
+      "equipments": [{ "id": 15, "nom": "Moteurs LEAP", "type": "propulsion" }],
+      "image": "assets/aircrafts/A319.png"
+    },
+    {
+      "id": 16,
+      "name": "A330 MRTT",
+      "type": "militaire",
+      "phase": "service",
+      "equipments": [
+        {
+          "id": 16,
+          "nom": "Système de ravitaillement avancé",
+          "type": "ravitaillement"
+        }
+      ],
+      "image": "assets/aircrafts/A330MRTT.png"
+    },
+    {
+      "id": 17,
+      "name": "A300",
+      "type": "moyen-courrier",
+      "phase": "retrait",
+      "equipments": [
+        { "id": 17, "nom": "Structure en aluminium", "type": "matériaux" }
+      ],
+      "image": "assets/aircrafts/A300.png"
+    },
+    {
+      "id": 18,
+      "name": "BelugaST",
+      "type": "cargo",
+      "phase": "service",
+      "equipments": [
+        {
+          "id": 18,
+          "nom": "Système de chargement rapide",
+          "type": "logistique"
+        }
+      ],
+      "image": "assets/aircrafts/belugaST.png"
+    },
+    {
+      "id": 19,
+      "name": "Eurofighter Typhoon",
+      "type": "chasseur",
+      "phase": "service",
+      "equipments": [{ "id": 19, "nom": "Système furtif", "type": "sécurité" }],
+      "image": "assets/aircrafts/eurofighterTyphoon.png"
+    },
+    {
+      "id": 20,
+      "name": "A321XLR",
+      "type": "long-courrier",
+      "phase": "développement",
+      "equipments": [
+        { "id": 20, "nom": "Réservoirs supplémentaires", "type": "performance" }
+      ],
+      "image": "assets/aircrafts/A321XLR.png"
+    },
+    {
+      "id": 21,
+      "name": "A350 Freighter",
+      "type": "cargo",
+      "phase": "concept",
+      "equipments": [
+        { "id": 21, "nom": "Renfort structurel", "type": "logistique" }
+      ],
+      "image": "assets/aircrafts/A350Freighter.png"
+    },
+    {
+      "id": 22,
+      "name": "A321P2F",
+      "type": "cargo",
+      "phase": "prototype",
+      "equipments": [
+        { "id": 22, "nom": "Conversion passager-fret", "type": "logistique" }
+      ],
+      "image": "assets/aircrafts/A321P2F.png"
+    }
+  ],
+
+  "parts": [
+    {
+      "id": 1,
+      "nom": "Système de divertissement en vol",
+      "type": "confort",
+      "description": "Un système pour offrir des films, de la musique et d'autres divertissements aux passagers."
+    },
+    {
+      "id": 2,
+      "nom": "Wi-Fi intégré",
+      "type": "connectivité",
+      "description": "Permet aux passagers d'accéder à Internet pendant le vol."
+    },
+    {
+      "id": 3,
+      "nom": "Réacteurs CFM LEAP-1A",
+      "type": "propulsion",
+      "description": "Moteurs modernes à faible consommation pour améliorer l'efficacité énergétique."
+    },
+    {
+      "id": 4,
+      "nom": "Capteurs météorologiques avancés",
+      "type": "sécurité",
+      "description": "Systèmes qui analysent en temps réel les conditions météorologiques pour une navigation sûre."
+    },
+    {
+      "id": 5,
+      "nom": "Réservoirs de carburant optimisés",
+      "type": "performance",
+      "description": "Réservoirs de grande capacité pour augmenter l'autonomie des avions long-courriers."
+    },
+    {
+      "id": 6,
+      "nom": "Cabine XL Comfort",
+      "type": "confort",
+      "description": "Cabine spacieuse avec sièges plus larges et un meilleur espace pour les jambes."
+    },
+    {
+      "id": 7,
+      "nom": "Quatre moteurs Trent 500",
+      "type": "propulsion",
+      "description": "Moteurs performants pour les avions de grande capacité comme l'A340."
+    },
+    {
+      "id": 8,
+      "nom": "Fibre de carbone",
+      "type": "matériaux",
+      "description": "Matériau léger et durable utilisé pour réduire le poids et améliorer l'efficacité."
+    },
+    {
+      "id": 9,
+      "nom": "Double pont cabine",
+      "type": "design",
+      "description": "Design à deux étages pour maximiser la capacité passager, typique de l'A380."
+    },
+    {
+      "id": 10,
+      "nom": "Système de ravitaillement aérien",
+      "type": "ravitaillement",
+      "description": "Permet le transfert de carburant en vol entre les avions."
+    },
+    {
+      "id": 11,
+      "nom": "Compartiment élargi",
+      "type": "logistique",
+      "description": "Espace supplémentaire pour le transport de charges volumineuses, comme dans le Beluga."
+    },
+    {
+      "id": 12,
+      "nom": "Radar de surveillance",
+      "type": "détection",
+      "description": "Équipement utilisé pour surveiller l'espace aérien et maritime."
+    },
+    {
+      "id": 13,
+      "nom": "Ravitailleur multi-rôle",
+      "type": "logistique",
+      "description": "Avion spécialisé capable de transporter des charges et de ravitailler d'autres avions."
+    },
+    {
+      "id": 14,
+      "nom": "Faible consommation de carburant",
+      "type": "performance",
+      "description": "Technologie avancée pour réduire la consommation de carburant."
+    },
+    {
+      "id": 15,
+      "nom": "Moteurs LEAP",
+      "type": "propulsion",
+      "description": "Moteurs modernes offrant une meilleure efficacité énergétique et réduisant les émissions."
+    },
+    {
+      "id": 16,
+      "nom": "Système de ravitaillement avancé",
+      "type": "ravitaillement",
+      "description": "Système permettant un ravitaillement en carburant rapide et sécurisé."
+    },
+    {
+      "id": 17,
+      "nom": "Structure en aluminium",
+      "type": "matériaux",
+      "description": "Matériau léger et résistant utilisé pour les structures aéronautiques."
+    },
+    {
+      "id": 18,
+      "nom": "Système de chargement rapide",
+      "type": "logistique",
+      "description": "Permet le chargement et le déchargement rapide des marchandises."
+    },
+    {
+      "id": 19,
+      "nom": "Système furtif",
+      "type": "sécurité",
+      "description": "Technologie avancée qui réduit la signature radar de l'avion."
+    },
+    {
+      "id": 20,
+      "nom": "Réservoirs supplémentaires",
+      "type": "performance",
+      "description": "Augmente la capacité de carburant pour des vols de très longue durée."
+    },
+    {
+      "id": 21,
+      "nom": "Renfort structurel",
+      "type": "logistique",
+      "description": "Structure renforcée pour supporter des charges plus lourdes."
+    },
+    {
+      "id": 22,
+      "nom": "Conversion passager-fret",
+      "type": "logistique",
+      "description": "Modification d'un avion passager pour le transport de fret."
+    },
+    {
+      "id": 23,
+      "nom": "Moteurs Rolls-Royce Trent XWB",
+      "type": "propulsion",
+      "description": "Moteurs ultra performants utilisés pour l'A350."
+    },
+    {
+      "id": 24,
+      "nom": "Ailes optimisées",
+      "type": "performance",
+      "description": "Ailes redessinées pour réduire la traînée et améliorer l'efficacité."
+    },
+    {
+      "id": 25,
+      "nom": "Système anti-missile",
+      "type": "sécurité",
+      "description": "Équipement de défense conçu pour protéger l'avion contre les menaces."
+    },
+    {
+      "id": 26,
+      "nom": "Système d'atterrissage automatique",
+      "type": "atterrissage",
+      "description": "Permet à l'avion d'atterrir de manière autonome dans certaines conditions."
+    },
+    {
+      "id": 27,
+      "nom": "GPS avionique",
+      "type": "navigation",
+      "description": "Système de navigation avancé pour un positionnement précis."
+    }
+  ]
+}
