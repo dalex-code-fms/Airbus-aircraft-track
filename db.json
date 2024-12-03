@@ -246,7 +246,7 @@
     }
   ],
 
-  "parts": [
+  "aircraftParts": [
     {
       "id": 1,
       "nom": "Système de divertissement en vol",
