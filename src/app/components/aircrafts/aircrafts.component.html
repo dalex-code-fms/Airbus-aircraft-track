@@ -1,0 +1,34 @@
+<div>
+    <ul class="navbar navbar-nav">
+        <li>
+            <button class="btn btn-outline-info m-2" (click)="getAllAircrafts()">Aircrafts</button>
+        </li>
+    </ul>
+    <ng-container *ngIf="aircrafts$ | async as result" [ngSwitch]="result.dataState">
+
+        <ng-container *ngSwitchCase="dataStateEnum.LOADING">
+            <div class="p-2"> Loading</div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="dataStateEnum.LOADED">
+            <div class="p-2"> Loaded</div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="dataStateEnum.ERROR">
+            <div class="p-2 text-danger">{{result.errorMessage}}</div>
+        </ng-container>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th> <th>Name</th> <th>Type</th> <th>Phase</th> <th>Equipements</th> <th>Image</th>
+            </tr>
+            <tr *ngFor="let aircraft of result.data">
+                <td>{{aircraft.id}}</td>
+                <td>{{aircraft.name}}</td>
+                <td>{{aircraft.type}}</td>
+                <td>{{aircraft.phase}}</td>
+                <td>{{aircraft.equipments}}</td>
+                <td>{{aircraft.image}}</td>
+            </tr>
+        </table>
+    </ng-container>
+</div>
