@@ -1,5 +1,4 @@
 .container {
-  /* background-color: red; */
   background-color: #102649;
   width: 100vw;
   height: 100vh;
@@ -9,6 +8,9 @@
   align-items: center;
 }
 
-.logo img {
-  width: 36.5rem;
+app-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
