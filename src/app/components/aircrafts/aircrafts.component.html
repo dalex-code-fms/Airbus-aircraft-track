@@ -15,18 +15,21 @@
         </ng-container>
 
         <ng-container *ngSwitchCase="aircraftsStateEnum.LOADED">
-        <table class="table table-striped">
-            <tr>
-                <th>Id</th> <th>Name</th> <th>Type</th> <th>Phase</th> <th>Equipements</th> 
-            </tr>
-            <tr *ngFor="let aircraft of state.aircrafts">
-                <td>{{aircraft.id}}</td>
-                <td>{{aircraft.name}}</td>
-                <td>{{aircraft.type}}</td>
-                <td>{{aircraft.phase}}</td>
-                <td>{{aircraft.equipments}}</td>
-               
-            </tr>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th> <th>Name</th> <th>Type</th> <th>Phase</th> <th>Equipements</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let aircraft of state.aircrafts">
+                    <td>{{aircraft.id}}</td>
+                    <td>{{aircraft.name}}</td>
+                    <td>{{aircraft.type}}</td>
+                    <td>{{aircraft.phase}}</td>
+                    <td>{{aircraft.equipments}}</td>
+                </tr>
+            </tbody>
         </table>
     </ng-container>
     
