@@ -1,9 +1,9 @@
 <a class="logo" href="#"
-    ><img
-      class="img-fluid"
-      src="../assets/images/airbus_logo.png"
-      alt="Airbus Logo"
-  /></a>
+  ><img
+    class="img-fluid"
+    src="../assets/images/airbus_logo.png"
+    alt="Airbus Logo"
+/></a>
 <div class="login-container">
   <h1 class="title">Connexion</h1>
   <form class="login-form">
@@ -23,6 +23,14 @@
       placeholder="Mot de passe"
     />
 
-    <button class="btn btn-primary w-100">SE CONNECTER</button>
+    <tr *ngFor="let user of state.user">
+      <td>{{ user.id }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.password }}</td>
+    </tr>
+
+    <button class="btn btn-primary w-100" (click)="isLogin()">
+      SE CONNECTER
+    </button>
   </form>
 </div>

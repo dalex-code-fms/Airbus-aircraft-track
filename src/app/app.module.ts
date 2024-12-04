@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
 import { Aircrafts } from './model/aircrafts';
 import { AircraftsComponent } from './components/aircrafts/aircrafts.component';
 import { AircraftsNavbarComponent } from './components/aircrafts/aircrafts-navbar/aircrafts-navbar.component';
@@ -14,15 +13,27 @@ import { AircraftsEffects } from './ngrx/aircrafts.effects';
 import { AircraftReducer } from './ngrx/aircrafts.reducer';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginReducer } from './ngrx/login.reducer';
+import { LoginComponent } from './components/login/login.component';
+import { isLoginAction } from './model/login';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, AircraftsComponent, AircraftsNavbarComponent, NavbarComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,
-    StoreModule.forRoot({airbusState : AircraftReducer}),
-    EffectsModule.forRoot([AircraftsEffects]),
-    StoreDevtoolsModule.instrument()
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    AircraftsComponent,
+    AircraftsNavbarComponent,
+    NavbarComponent,
+    HomeComponent,
   ],
->>>>>>> origin/nath
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({ airbusState: AircraftReducer }),
+    EffectsModule.forRoot([AircraftsEffects]),
+    StoreDevtoolsModule.instrument(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
