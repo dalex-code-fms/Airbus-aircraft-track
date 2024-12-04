@@ -1,0 +1,49 @@
+.ng-container, .p-2{
+    background-color: white;
+} 
+
+ .table {
+    border: 1px solid;
+  }
+
+  /* .table-container {
+    background-color: #f2f5f9;
+    width: 100%;
+    display: flex;
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+    background-color: #f2f5f9;
+    border-radius: 0.5rem;
+    margin: 0 1rem;
+    color: black;
+  }
+  
+  thead {
+    color: #102649;
+    height: 8rem;
+    display: flex;
+  }
+  
+  thead tr {
+    display: table;
+    width: 100%;
+  }
+  
+  thead tr th {
+    font-size: 1.6rem;
+  }
+  
+  tbody {
+    max-height: 50vh;
+    overflow-y: auto;
+    width: 100%;
+    display: block;
+  }
+  
+  tbody tr {
+    width: 100%;
+    border-bottom: 0.5rem solid #f2f5f9;
+  } */
