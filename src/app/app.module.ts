@@ -15,7 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginReducer } from './ngrx/login.reducer';
 import { LoginComponent } from './components/login/login.component';
-import { isLoginAction } from './model/login';
+import { LoginAction } from './model/login';
 
 @NgModule({
   declarations: [

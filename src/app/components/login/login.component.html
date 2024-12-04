@@ -23,14 +23,18 @@
       placeholder="Mot de passe"
     />
 
-    <tr *ngFor="let user of state.user">
-      <td>{{ user.id }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.password }}</td>
-    </tr>
+    <div *ngIf="LoginState$ | async as loginState">
+      <table>
+        <tr *ngFor="let user of state.users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.password }}</td>
+        </tr>
+      </table>
 
-    <button class="btn btn-primary w-100" (click)="isLogin()">
-      SE CONNECTER
-    </button>
+      <button class="btn btn-primary w-100" (click)="isLogin()">
+        SE CONNECTER
+      </button>
+    </div>
   </form>
 </div>

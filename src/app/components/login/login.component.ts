@@ -12,18 +12,19 @@ import { isLoginState, isLoginStateEnum } from 'src/app/ngrx/login.state';
 export class LoginComponent implements OnInit {
   LoginState$: Observable<isLoginState> | null = null;
   readonly aircraftsStateEnum = isLoginStateEnum;
-  store: any;
   state: any;
+  user: any;
 
-  constructor(store: Store<any>) {}
+  constructor(private store: Store<any>) {}
 
   ngOnInit(): void {
     this.LoginState$ = this.store.pipe(map((state: any) => state.airbusState));
-
-    throw new Error('Method not implemented.');
+    this.LoginState$ = this.store.select('login');
+    console.log('LoginState:', this.state);
+    this.user = { id: 1, email: 'elbab@gmail.com', password: '1234' };
   }
 
-  users: { id: number; email: string; password: string }[] = [];
+  //users: { id: number; email: string; password: string }[] = [];
 
   // ngOnInit(): void {
   //   this.isLoginState$ = this.store.pipe(
