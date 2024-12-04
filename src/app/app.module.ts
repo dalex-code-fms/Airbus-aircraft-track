@@ -12,9 +12,11 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AircraftsEffects } from './ngrx/aircrafts.effects';
 import { AircraftReducer } from './ngrx/aircrafts.reducer';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, AircraftsComponent, AircraftsNavbarComponent],
+  declarations: [AppComponent, LoginComponent, AircraftsComponent, AircraftsNavbarComponent, NavbarComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule,
     StoreModule.forRoot({airbusState : AircraftReducer}),
     EffectsModule.forRoot([AircraftsEffects]),

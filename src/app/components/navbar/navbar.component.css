@@ -1,0 +1,48 @@
+.navbar-airbus {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-firstLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 36.5rem;
+  }
+  
+  .searchbar-container {
+    position: relative;
+    align-self: center;
+    width: 85rem;
+    margin-top: 4rem;
+  }
+  
+  .searchbar-container input {
+    width: 100%;
+    height: 3.8rem;
+    background-color: #f2f5f9;
+    border-radius: 0.5rem;
+    border-style: none;
+    box-shadow: inset 3px 5px 6px -3px #a3a5a8;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .searchbar-container img {
+    position: absolute;
+    width: 3rem;
+    right: 1rem;
+    top: 0.5rem;
+  }
+  
+  .icon-off {
+    width: 4rem;
+  }
+  
+  .icon-off:hover {
+    width: 4.1rem;
+    cursor: pointer;
+  }
