@@ -18,12 +18,17 @@ export class LoginEffects {
     this.effectAction.pipe(
       ofType(onSubmitActionsTypes.GET_IS_LOGIN),
       mergeMap((action: onSubmitAction) => {
-        return this.apiService
-          .onSubmit(action.payload.email, action.payload.password)
-          .pipe(
-            map((users) => new onSubmitActionSuccess(users)),
-            catchError((err) => of(new onSubmitActionError(err.message)))
-          );
+        return this.apiService.onSubmit(action.payload.email).pipe(
+          map((user) => {
+            if (user[0].password === action.payload.password) {
+              console.log('user connected');
+            } else {
+              console.log('not conencted');
+            }
+            return new onSubmitActionSuccess(user);
+          }),
+          catchError((err) => of(new onSubmitActionError(err.message)))
+        );
       })
     )
   );

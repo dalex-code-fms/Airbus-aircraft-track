@@ -17,6 +17,7 @@ import { LoginReducer } from './ngrx/login.reducer';
 import { LoginComponent } from './components/login/login.component';
 import { LoginAction } from './model/login';
 import { LoginEffects } from './ngrx/login.effects';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { LoginEffects } from './ngrx/login.effects';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({ airbusState: AircraftReducer }),
+    StoreModule.forRoot({ airbusState: AircraftReducer, login: LoginReducer }),
     EffectsModule.forRoot([AircraftsEffects, LoginEffects]),
     StoreDevtoolsModule.instrument(),
   ],

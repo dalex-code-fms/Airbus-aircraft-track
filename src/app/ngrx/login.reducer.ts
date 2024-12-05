@@ -13,7 +13,7 @@ export function LoginReducer(state: onSubmitState = initState, action: Action) {
       return {
         ...state,
         dataState: onSubmitStateEnum.LOADED,
-        aircrafts: (<onSubmitActions>action).payload,
+        user: (<onSubmitActions>action).payload,
       };
 
     case onSubmitActionsTypes.GET_IS_LOGIN_ERROR:
