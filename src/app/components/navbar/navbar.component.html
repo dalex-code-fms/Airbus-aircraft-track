@@ -1,50 +1,33 @@
 <div class="navbar-airbus">
+  <div class="navbar-firstLine">
+    <a class="logo" href="#"
+      ><img
+        class="img-fluid"
+        src="../assets/images/airbus_logo.png"
+        alt="Airbus Logo"
+    /></a>
 
-    <div class="navbar-firstLine">
-  
-      <a class="logo" href="#"
-  
-        ><img
-  
-          class="img-fluid"
-  
-          src="../assets/images/airbus_logo.png"
-  
-          alt="Airbus Logo"
-  
-      /></a>
-  
-      <img
-  
-        class="icon-off"
-  
-        src="../assets/images/icons/off.png"
-  
-        alt="icon logout"
-  
-      />
-  
-    </div>
-  
-  
-  
-    <div class="searchbar-container">
-  
-      <label for="searchbar"></label>
-  
-      <input type="text" placeholder="chercher par mot-clé" />
-  
-      <a href="#"
-  
-        ><img
-  
-          src="../assets/images/icons/search-icon.png"
-  
-          alt="icone de recherche"
-  
-      /></a>
-  
-    </div>
-  
+    <img
+      class="icon-off"
+      src="../assets/images/icons/off.png"
+      alt="icon logout"
+    />
   </div>
-  
+
+  <div class="searchbar-container">
+    <label for="searchbar"></label>
+
+    <input
+      [(ngModel)]="searchKeyword"
+      (keyup)="onSearch()"
+      type="text"
+      placeholder="chercher par mot-clé"
+    />
+
+    <a href="#"
+      ><img
+        src="../assets/images/icons/search-icon.png"
+        alt="icone de recherche"
+    /></a>
+  </div>
+</div>

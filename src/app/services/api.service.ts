@@ -12,9 +12,9 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   public getAircrafts(): Observable<Aircrafts[]> {
-    let host =
-      Math.random() > 0.5 ? environment.host : environment.unreachableHost;
-    return this.http.get<Aircrafts[]>(host + '/aircrafts');
+    // let host =
+    //   Math.random() > 0.5 ? environment.host : environment.unreachableHost;
+    return this.http.get<Aircrafts[]>(environment.host + '/aircrafts');
   }
 
   public onSubmit(email: String): Observable<Login[]> {
