@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Aircrafts } from '../model/aircrafts';
+import { Login } from '../model/login';
 
 @Injectable({
   providedIn: 'root',
@@ -16,5 +17,9 @@ export class ApiService {
     return this.http.get<Aircrafts[]>(host + '/aircrafts');
   }
 
-  // public isLogin(): Observable {
+  public onSubmit(email: String, password: String): Observable<Login> {
+    let host =
+      Math.random() > 0.5 ? environment.host : environment.unreachableHost;
+    return this.http.get<Login>(environment.host + '/users?email=' + email);
+  }
 }

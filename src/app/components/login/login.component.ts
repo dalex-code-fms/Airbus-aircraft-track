@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
-import { isLoginAction } from 'src/app/ngrx/login.actions';
-import { isLoginState, isLoginStateEnum } from 'src/app/ngrx/login.state';
+import { onSubmitAction } from 'src/app/ngrx/login.actions';
+import { onSubmitState, onSubmitStateEnum } from 'src/app/ngrx/login.state';
 
 @Component({
   selector: 'app-login',
@@ -10,18 +10,19 @@ import { isLoginState, isLoginStateEnum } from 'src/app/ngrx/login.state';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  LoginState$: Observable<isLoginState> | null = null;
-  readonly aircraftsStateEnum = isLoginStateEnum;
+  LoginState$: Observable<onSubmitState> | null = null;
+  readonly aircraftsStateEnum = onSubmitStateEnum;
   state: any;
-  user: any;
+  email: String = '';
+  password: String = '';
 
   constructor(private store: Store<any>) {}
 
   ngOnInit(): void {
-    this.LoginState$ = this.store.pipe(map((state: any) => state.airbusState));
+    this.LoginState$ = this.store.pipe(map((state: any) => state.loginState));
     this.LoginState$ = this.store.select('login');
-    console.log('LoginState:', this.state);
-    this.user = { id: 1, email: 'elbab@gmail.com', password: '1234' };
+    //console.log('LoginState:', this.state);
+    console.log(this.LoginState$);
   }
 
   //users: { id: number; email: string; password: string }[] = [];
@@ -32,7 +33,12 @@ export class LoginComponent implements OnInit {
   //   );
   // }
 
-  isLogin() {
-    this.store.dispatch(new isLoginAction({}));
+  onSubmit() {
+    this.store.dispatch(
+      new onSubmitAction({
+        email: this.email,
+        password: this.password,
+      })
+    );
   }
 }

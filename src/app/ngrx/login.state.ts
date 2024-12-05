@@ -1,35 +1,22 @@
-import { isLoginAction } from './login.actions';
-import { isLoginActionsTypes } from './login.actions';
-import { isLoginActionSuccess } from './login.actions';
+import { Login } from '../model/login';
 
-export interface User {
-  id: number;
-  email: string;
-  password: string;
-}
-
-export const users: User[] = [
-  { id: 1, email: 'elbab@gmail.com', password: '1234' },
-  { id: 2, email: 'joanna@gmail.com', password: '1234' },
-];
-
-export enum isLoginStateEnum {
+export enum onSubmitStateEnum {
   LOADING = 'Loading',
   LOADED = 'Loaded',
   ERROR = 'Error',
   INITIAL = 'Initial',
 }
 
-export interface isLoginState {
-  users: User[]; // ?????
+export interface onSubmitState {
+  users: Login[]; // ?????
   isLogin: '';
   errorMessage: string;
-  dataState: isLoginStateEnum;
+  dataState: onSubmitStateEnum;
 }
 
-export const initState: isLoginState = {
+export const initState: onSubmitState = {
   isLogin: '',
   errorMessage: 'Pas de connexion',
-  dataState: isLoginStateEnum.INITIAL,
+  dataState: onSubmitStateEnum.INITIAL,
   users: [], // ????
 };

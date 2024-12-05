@@ -1,4 +1,4 @@
-import { isLoginActionsTypes } from '../ngrx/login.actions';
+import { onSubmitActionsTypes } from '../ngrx/login.actions';
 
 export interface Login {
   id: number;
@@ -7,6 +7,6 @@ export interface Login {
 }
 
 export interface LoginAction {
-  type: isLoginActionsTypes;
+  type: onSubmitActionsTypes;
   payload: any;
 }

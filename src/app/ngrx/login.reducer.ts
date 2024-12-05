@@ -1,26 +1,26 @@
 import { Action } from '@ngrx/store';
-import { isLoginActions } from './login.actions';
-import { isLoginActionsTypes } from './login.actions';
-import { initState, isLoginState, isLoginStateEnum } from './login.state';
+import { onSubmitActions } from './login.actions';
+import { onSubmitActionsTypes } from './login.actions';
+import { initState, onSubmitState, onSubmitStateEnum } from './login.state';
 
-export function LoginReducer(state: isLoginState = initState, action: Action) {
+export function LoginReducer(state: onSubmitState = initState, action: Action) {
   switch (action.type) {
-    case isLoginActionsTypes.GET_IS_LOGIN:
+    case onSubmitActionsTypes.GET_IS_LOGIN:
       console.log('loading...');
-      return { ...state, dataState: isLoginStateEnum.LOADING };
+      return { ...state, dataState: onSubmitStateEnum.LOADING };
 
-    case isLoginActionsTypes.GET_IS_LOGIN_SUCCESS:
+    case onSubmitActionsTypes.GET_IS_LOGIN_SUCCESS:
       return {
         ...state,
-        dataState: isLoginStateEnum.LOADED,
-        aircrafts: (<isLoginActions>action).payload,
+        dataState: onSubmitStateEnum.LOADED,
+        aircrafts: (<onSubmitActions>action).payload,
       };
 
-    case isLoginActionsTypes.GET_IS_LOGIN_ERROR:
+    case onSubmitActionsTypes.GET_IS_LOGIN_ERROR:
       return {
         ...state,
-        dataState: isLoginStateEnum.ERROR,
-        errorMessage: (<isLoginActions>action).payload,
+        dataState: onSubmitStateEnum.ERROR,
+        errorMessage: (<onSubmitActions>action).payload,
       };
 
     default:
