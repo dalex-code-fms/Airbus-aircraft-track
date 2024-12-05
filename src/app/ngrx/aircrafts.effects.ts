@@ -41,24 +41,24 @@ export class AircraftsEffects {
     )
   );
 
-  getAircraftsBySearchPhase: Observable<Action> = createEffect(() =>
-    this.effectAction.pipe(
-      ofType(AircraftsActionsTypes.GET_SEARCH_AIRCRAFTS),
-      switchMap((action: setSearchKeywordAction) => {
-        const searchKeyword = action.payload;
+  //   getAircraftsBySearchPhase: Observable<Action> = createEffect(() =>
+  //     this.effectAction.pipe(
+  //       ofType(AircraftsActionsTypes.GET_SEARCH_AIRCRAFTS),
+  //       switchMap((action: setSearchKeywordAction) => {
+  //         const searchKeyword = action.payload;
 
-        return this.apiService.getAircrafts().pipe(
-          map((aicrafts) => {
-            const filteredAircrafts = aicrafts.filter((aicraft) =>
-              aicraft.phase.toLowerCase().includes(searchKeyword.toLowerCase())
-            );
-            return new getAllAircraftsActionSuccess(filteredAircrafts);
-          }),
-          catchError((err) => of(new getAllAircraftsActionError(err.message)))
-        );
-      })
-    )
-  );
+  //         return this.apiService.getAircrafts().pipe(
+  //           map((aicrafts) => {
+  //             const filteredAircrafts = aicrafts.filter((aicraft) =>
+  //               aicraft.phase.toLowerCase().includes(searchKeyword.toLowerCase())
+  //             );
+  //             return new getAllAircraftsActionSuccess(filteredAircrafts);
+  //           }),
+  //           catchError((err) => of(new getAllAircraftsActionError(err.message)))
+  //         );
+  //       })
+  //     )
+  //   );
 
   getAllAircraftsEffect: Observable<Action> = createEffect(() =>
     this.effectAction.pipe(
