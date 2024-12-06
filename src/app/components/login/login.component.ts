@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
 import { onSubmitAction } from 'src/app/ngrx/login.actions';
 import { onSubmitState, onSubmitStateEnum } from 'src/app/ngrx/login.state';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,11 @@ export class LoginComponent implements OnInit {
   LoginState$: Observable<onSubmitState> | null = null;
   readonly aircraftsStateEnum = onSubmitStateEnum;
   state: any;
-  constructor(private formBuilder: FormBuilder, private store: Store<any>) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private store: Store<any>,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -36,5 +41,7 @@ export class LoginComponent implements OnInit {
         password: this.loginForm.value.password,
       })
     );
+
+    this.router.navigateByUrl('aircrafts');
   }
 }
